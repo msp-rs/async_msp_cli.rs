@@ -30,6 +30,11 @@ features = ["unstable", "attributes"]
 [features]
 suppport_int32_setting_type = ["multiwii_serial_protocol_v2/suppport_int32_setting_type", "async_msp_lib/suppport_int32_setting_type"]
 
+[profile.release]
+opt-level = 'z'  # Optimize for size.
+lto = true
+panic = 'abort'
+
 [tasks.clean]
 command = "cargo"
 args = ["clean"]
