@@ -351,8 +351,8 @@ async fn main() {
         .expect("Failed to open serial port");
 
     // green-thread 1: read into input channel from serial(reading from serial is blocking)
-    let inav = INavMsp::new();
-    inav.start(serialport, Duration::from_millis(0), buff);
+    let inav = INavMsp::new(buff);
+    inav.start(serialport, Duration::from_millis(0));
 
     match matches.subcommand() {
         ("setting", Some(setting_matches)) => {
