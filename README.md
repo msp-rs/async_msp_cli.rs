@@ -1,3 +1,7 @@
+### This repo is now part of https://github.com/msp-rs/async_msp_lib.rs
+
+=======================================================================
+
 A Multiwii Serial Protocol (MSP) CLI
 ===========================================
 
